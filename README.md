@@ -1,2 +1,0 @@
-# LongD-Hub
-Hack Release
