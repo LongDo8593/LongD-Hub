@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# 1. Cấu hình thư mục
+
 DOWNLOAD_PATH="/sdcard/Download"
 mkdir -p $DOWNLOAD_PATH
 cd $DOWNLOAD_PATH
 
 echo "--- 🚀 BẮT ĐẦU QUÁ TRÌNH AUTO ---"
 
-# Danh sách link (Thay URL thật của ông vào đây)
 LINKS=(
     "https://download1592.mediafire.com/ei7pabzwq8mg8Suc94xolhQbigv9q74khozS4MeI-Dkf1S5AJ1cQiBamRgyZbw-6IyXZ83uYtxqMiVXyjxAt1EmlclEVQ4JnP7dMv1Qxg2aKnT-UdeJ-vbxMgFAvkaI3NIuFHbFihGkHDqCEKG78ypU700df28fScfQ5M7GRR0U/r5ok8xuzaa4167p/DeltaQTLiteSamehwidCloneVIP%28ZM%29+01-2.711.876.apk_clone.apk"
     "https://download844.mediafire.com/wdo8mrn4i6agpMCaNA_1yxrFBdiuhK-IEDEPro1Km2hdwplGqqr9b-FBA5lSTOPkQy4fVDwPRA_NZDbJytZR6ZcxFoAashJp8_U3F1fO5k6NjXXG96PrynDtQBRrnP3KuaNQ2Xmb03Zxb4v1rW6Z0Uas-HTatm5KqDMy1U5NsBw/rr636jfea0eg53w/DeltaQTLiteSamehwidCloneVIP%28ZM%29+02-2.711.876.apk_clone.apk"
@@ -18,15 +17,15 @@ LINKS=(
     "https://download1085.mediafire.com/97reyhifcmngLjbzNkPgoYUJP_uiXRkLjZkqPFjcnJJMqPETW7zoL2Llr73SpYV-r1ssDE4WukWrsW-Kacld8QPLxHdjxzAzhZqbRM65-Vs826JIrweFoVZk6MmtF22u0ZBCIpSpcznd8aomZNB36rBsD43tdIEHU8-pUqL_v4Q/brin8zj0eq82i96/MCP_v26.01.14_00_25+%281%29.apk"
 )
 
-# 2. Vòng lặp Tải và Cài đặt
+
 for url in "${LINKS[@]}"; do
     filename=$(basename "$url")
     
-    # Tải file
+
     echo "[*] Đang tải: $filename..."
     curl -L -o "$filename" "$url"
     
-    # Cài đặt file (Sử dụng quyền Root để cài ngầm)
+    
     if [ -f "$filename" ]; then
         echo "[+] Đang cài đặt: $filename..."
         su -c "pm install -r $filename"
@@ -37,11 +36,11 @@ done
 
 echo "--- ✅ ĐÃ CÀI XONG TẤT CẢ APK! ---"
 
-# 3. Chạy lệnh setup từ GitHub
+
 echo "[*] Đang lấy script setup từ GitHub..."
 curl https://raw.githubusercontent.com/zam2109/Toolrejoin/refs/heads/main/Setubtoolrejoin | bash
 
 echo "--- ⚡ ĐANG KHỞI CHẠY TOOL REJOIN... ---"
 
-# 4. Lệnh khởi động Tool
+
 su -c "export PATH=$PATH:/data/data/com.termux/files/usr/bin && export TERM=xterm-256color && cd /sdcard/Download && python zamtoolrejoinver10.py"
