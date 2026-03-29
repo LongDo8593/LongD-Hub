@@ -11,6 +11,7 @@ echo "🚀 START AUTO"
 PAGES=(
 "https://www.mediafire.com/file/r5ok8xuzaa4167p/DeltaQTLiteSamehwidCloneVIP%2528ZM%2529_01-2.711.876.apk_clone.apk/file"
 "https://www.mediafire.com/file/rr636jfea0eg53w/DeltaQTLiteSamehwidCloneVIP%2528ZM%2529_02-2.711.876.apk_clone.apk/file"
+"https://www.mediafire.com/file/3h74u8hxskd4d41/DeltaQTLiteSamehwidCloneVIP%2528ZM%2529_03-2.711.876.apk_clone.apk/file"
 "https://www.mediafire.com/file/2bwbngf63fe4d0e/DeltaQTLiteSamehwidCloneVIP%2528ZM%2529_04-2.711.876.apk_clone.apk/file"
 "https://www.mediafire.com/file/0hc08nzxk1h73q0/ZArchiver_1.0.10_APKPure.apk/file"
 "https://www.mediafire.com/file/brin8zj0eq82i96/MCP_v26.01.14_00_25_%25281%2529.apk/file"
